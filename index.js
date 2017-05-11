@@ -1,8 +1,8 @@
 (function() {
   'use strict';
-  let redLight = document.getElementById("stopButton").onclick = illuminateRed;
-  let yellowLight = document.getElementById("slowButton").onclick = illuminateYellow;
-  let greenLight = document.getElementById("goButton").onclick = illuminateGreen;
+  document.getElementById("stopButton").onclick = illuminateRed;
+  document.getElementById("slowButton").onclick = illuminateYellow;
+  document.getElementById("goButton").onclick = illuminateGreen;
   let button = document.querySelectorAll('.button');
   let rLightOn = false;
   let yLightOn = false;
@@ -11,9 +11,11 @@
   function illuminateRed() {
     if (rLightOn === false) {
       document.getElementById('stopLight').style.backgroundColor = "red";
+      console.log("Stop light bulb on");
       rLightOn = true;
     } else if (rLightOn === true) {
       document.getElementById('stopLight').style.backgroundColor = "black";
+      console.log("Stop light bulb off");
       rLightOn = false;
     }
   }
@@ -21,9 +23,11 @@
   function illuminateYellow() {
     if (yLightOn  === false) {
       document.getElementById('slowLight').style.backgroundColor = "yellow";
+      console.log("Yellow light bulb on");
       yLightOn = true;
     } else if (yLightOn === true) {
       document.getElementById('slowLight').style.backgroundColor = "black";
+      console.log("Yellow light bulb off");
       yLightOn = false;
     }
   }
@@ -31,9 +35,11 @@
   function illuminateGreen() {
     if (gLightOn  === false) {
       document.getElementById('goLight').style.backgroundColor = "green";
+      console.log("Green light bulb on");
       gLightOn = true;
     } else if (gLightOn === true) {
       document.getElementById('goLight').style.backgroundColor = "black";
+      console.log("Green light bulb off");
       gLightOn = false;
     }
   }
@@ -52,17 +58,3 @@
 
 
 })();
-
-// redLight = addEventListener('mouseenter', blah);
-// console.log(yellowLight = addEventListener('mouseenter', yellowInMouse));
-// console.log(greenLight = addEventListener('mouseenter', greenInMouse));
-// console.log(redLight = addEventListener('mouseleave', redOutMouse));
-// console.log(yellowLight = addEventListener('mouseleave', yellowOutMouse));
-// console.log(greenLight = addEventListener('mouseleave', greenOutMouse));
-
-// let redInMouse = () => {console.log("Entered 'stop' button");}
-// let redOutMouse = () => {console.log("Left 'stop' button");}
-// let yellowInMouse = () => {console.log("Entered 'slow' button");}
-// let yellowOutMouse = () => {console.log("Left 'slow' button");}
-// let greenInMouse = () => {console.log("Entered 'go' button");}
-// let greenOutMouse = () => {console.log("Left 'go' button");}
